@@ -1,0 +1,313 @@
+/* ---------- Basic Setup --------- */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: white;
+    color: #555;
+    font-family: 'Lato',"Arial", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.clear-fix{
+    zoom: 1;
+}
+
+.clear-fix::after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* ---------- Other Setup --------- */
+
+/* color == #af5404 */
+
+/* ---------- Reuseable Components --------- */
+
+
+.row{
+    max-width: 1140px;
+    margin: auto;
+}
+
+section{
+    padding: 80px 0;
+}
+
+.long-para{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 5%;
+}
+
+.box{
+    padding: 1%;
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+
+.icon-big{
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+
+/* ---------- Heading --------- */
+
+h1 , h2 , h3{
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1{
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 240%;
+    word-spacing: 3px;
+}
+
+h2{
+    text-align: center;
+    font-size: 180%;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+h2::after{
+    content: ' ';
+    display: block;
+    width: 300px;
+    height: 2px;
+    margin: auto;
+    background-color: #e67e22;
+    margin-top: 30px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+/* ---------- Button Group --------- */
+
+
+.btn:link , .btn:visited{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+}
+
+.btn-full:link , .btn-full:visited{
+    border: 1px solid #e67e22;
+    background-color: #e67e22;
+    color: white;
+    margin-right: 15px;
+}
+
+.btn-full:hover , .btn-full:active{
+    background-color: #af5404;
+    border: 1px solid #af5404;
+}
+
+
+.btn-ghost:link , .btn-ghost:visited{
+    border: 1px solid #e67e22;
+    background-color: transparent;
+    color: #e67e22;
+}
+
+.btn-ghost:hover , .btn-ghost:active{
+    background-color: #af5404;
+    border: 1px solid #af5404;
+    color: white;
+}
+
+/* ---------- Header Section --------- */
+
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)) , url(/resource/images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.header{
+    width: 1140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.main-nav li a:link , .main-nav li a:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+    padding: 8px 0;
+}
+
+.main-nav li a:hover , .main-nav li a:active {
+    border-bottom: 2px solid #af5404;
+}
+
+/* ---------- Feature Section --------- */
+
+
+
+/* ---------- Meals Section --------- */
+
+.meals-showcase{
+    width: 100%;
+    list-style-type: none;
+}
+
+.meals-showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+
+.meals-showcase li img{
+    margin: 0;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s , scale 0.5s;
+    opacity: 80%;
+}
+
+.meals-showcase li img:hover{
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+/* ----------- How it work Section --------- */
+
+.section-steps{
+    background-color: rgb(240, 231, 231);
+}
+
+.steps-box:first-child{
+    margin-top: 30px;
+    text-align: right;
+    padding-right: 3%;
+}
+
+.app-screen{
+    width: 40%;
+}
+
+.works-step{
+    margin-bottom: 50px;
+}
+
+.works-step div{
+    display: block;
+    color: #e67e22;
+    border:  2px solid #e67e22;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 5px;
+    font-size: 150%;
+    float: left;
+    margin-right: 25px;
+}
+
+.steps-box:last-child{
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.works-step:last-of-type{
+    margin-bottom: 80px;
+}
+
+/* ----------- Cities Section --------- */
+
+.box img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature{
+    margin-bottom: 15px;
+}
+
+.icon-small{
+    color: #e67e22;
+    display: inline-block;
+    width: 30px;
+    font-size: 120%;
+    text-align: center;
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-right: 10px;
+}
+
+.city-twitter:link , .city-twitter:visited{
+    text-decoration: none;
+    color: #e67e22;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition:  border-bottom 0.2s color 0.2s;
+}
+
+.city-twitter:hover , .city-twitter:active{
+    color: black;
+    border-bottom: 1px solid  #e67e22;
+}
