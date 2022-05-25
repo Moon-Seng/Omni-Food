@@ -107,7 +107,7 @@ h3{
 /* ---------- Button Group --------- */
 
 
-.btn:link , .btn:visited{
+.btn:link , .btn:visited , input[type=submit]{
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
@@ -115,26 +115,26 @@ h3{
     border-radius: 200px;
 }
 
-.btn-full:link , .btn-full:visited{
+.btn-full:link , .btn-full:visited {
     border: 1px solid #e67e22;
     background-color: #e67e22;
     color: white;
     margin-right: 15px;
 }
 
-.btn-full:hover , .btn-full:active{
+.btn-full:hover , .btn-full:active {
     background-color: #af5404;
     border: 1px solid #af5404;
 }
 
 
-.btn-ghost:link , .btn-ghost:visited{
+.btn-ghost:link , .btn-ghost:visited {
     border: 1px solid #e67e22;
     background-color: transparent;
     color: #e67e22;
 }
 
-.btn-ghost:hover , .btn-ghost:active{
+.btn-ghost:hover , .btn-ghost:active {
     background-color: #af5404;
     border: 1px solid #af5404;
     color: white;
@@ -144,11 +144,12 @@ h3{
 
 
 header{
-    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)) , url(/resource/images/hero.jpg);
+    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)) , url(/resource/css/images/hero.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
     position: relative;
+    background-attachment: fixed;
 }
 
 .header{
@@ -310,4 +311,122 @@ header{
 .city-twitter:hover , .city-twitter:active{
     color: black;
     border-bottom: 1px solid  #e67e22;
+}
+
+/* ----------- Testimonail Section --------- */
+
+.section-testimonals{
+    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)) , url(/resource/css/images/back-customers.jpg) ;
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+blockquote{
+    font-style: italic;
+    padding: 2%;
+    line-height: 145%;
+}
+
+blockquote:before { 
+    content: open-quote; 
+    font-size: 400%;
+}
+
+blockquote::after { 
+    content: close-quote; 
+    color: transparent;
+    height: 0;
+}
+
+cite{
+    font-size: 90%;
+    margin-top: 35px;
+    display: block;
+}
+
+cite img{
+    vertical-align: middle;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* ----------- Sign up Section --------- */
+
+
+.section-plan{
+    background-color: #cfcfcf;
+}
+
+.plan-box{
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    border-radius: 5px;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px #e4e1e1;
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.plan-price{
+    font-size: 300%;
+    font-weight: 100;
+    margin-bottom: 10px;
+    color: #e67e22;
+}
+
+.plan-price span {
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-price-meal{
+    font-size: 80%;
+}
+
+.plan-box ul{
+    list-style-type: none;
+}
+
+.plan-box ul li{
+    padding: 5px 0;
+}
+
+.plan-box div:first-child{
+    background-color: #f5f5f5;
+}
+
+.plan-box div:last-child{
+    text-align: center;
+    border: 0;
+}
+
+/* ----------- Form Section --------- */
+
+.content-form{
+    width: 60%;
+    margin: auto;
+}
+
+input[type=text], input[type=email] , select ,textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #616060;
+}
+
+textarea{
+    height: 100px;
+}
+
+input[type=checkbox]{
+    margin: 10px 5px 10px 0;
+}
+
+*:focus{
+    outline: none;
 }
